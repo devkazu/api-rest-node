@@ -1,0 +1,35 @@
+{
+  "name": "api-rest-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
+  },
+  "author": "Leo Kazuyuki Nagatani",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2",
+    "husky": "^9.0.11"
+  }
+}
